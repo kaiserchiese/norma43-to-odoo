@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+.env
+.env.*
+!.env.example
+*.csv
+!examples/*.csv
+!tests/fixtures/*.csv

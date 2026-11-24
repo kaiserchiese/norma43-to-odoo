@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "c43-to-odoo"
+version = "0.1.0"
+description = "Read Spanish Norma 43 (Cuaderno 43) bank statements and turn them into Odoo bank statement lines (CSV or XML-RPC)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "kaiserchiese" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov"]
+
+[project.scripts]
+c43-to-odoo = "c43_to_odoo.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
